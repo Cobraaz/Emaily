@@ -3,11 +3,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
 import Header from "./Header";
-import * as actions from "../actions";
 import Landing from "./Landing";
+import Dashboard from "./Dashboard";
+import SurveyNew from "./surveys/SurveyNew";
 
-const Dashboard = () => <div>Dashboard</div>;
-const SurveyNew = () => <div>SurveyNew</div>;
+import * as actions from "../actions";
 
 class App extends Component {
   componentDidMount() {

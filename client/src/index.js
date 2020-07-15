@@ -8,6 +8,9 @@ import reduxThunk from "redux-thunk";
 import App from "./components/App";
 import reducers from "./reducers";
 
+import axios from "axios";
+window.axios = axios;
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducers,
@@ -20,5 +23,3 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
-
-console.log(process.env.REACT_APP_STRIPE_KEY);
